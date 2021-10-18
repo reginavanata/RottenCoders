@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3595cc21-42cc-401f-a47e-e48fa225fc7e" name="RottenCoders" url="https://rotten-coders.greenriverdev.com">
+        <fileTransfer rootFolder="/home/rottenco/public_html" accessType="SFTP" host="rotten-coders.greenriverdev.com" port="18765" sshConfigId="f46fa84d-a614-47df-bd42-e014893b029a" sshConfig="rottenco@rotten-coders.greenriverdev.com:18765 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
