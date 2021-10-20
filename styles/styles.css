@@ -5,8 +5,8 @@
 }
 
 .jumbotron {
-    display: flex;
-    align-items: center;
+    /*display: flex;*/
+    /*align-items: center;*/
     background-image: url("../images/forest.jpg");
     background-size: cover;
     background-position: center;
@@ -20,7 +20,8 @@ section.container .row {
 }
 
 .jumbotron >h1 {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     color: white;
     font-weight: 450;
     padding: 10px 35px;
@@ -31,10 +32,10 @@ section.container .row {
     -1px -1px 0 #23430C;
 }
 
-.jumbotron .row {
+/*.jumbotron .row {
     align-content: center;
     justify-content: center;
-}
+}*/
 
 header nav {
     display: flex;
