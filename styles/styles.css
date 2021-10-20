@@ -25,6 +25,10 @@ section.container .row {
     font-weight: 450;
     padding: 10px 35px;
     border-radius: 5px;
+    text-shadow: -1px 1px 2px #23430C,
+    1px 1px 2px #23430C,
+    1px -1px 0 #23430C,
+    -1px -1px 0 #23430C;
 }
 
 .jumbotron .row {
