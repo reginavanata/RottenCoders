@@ -1,7 +1,12 @@
-.jumbotron{
+@media (max-width: 979px) {
+    .jumbotron {
+        padding-top: 75px;
+    }
+}
+
+.jumbotron {
     display: flex;
     align-items: center;
-    height: 350px;
     background-image: url("../images/forest.jpg");
     background-size: cover;
     background-position: center;
@@ -14,11 +19,10 @@ section.container .row {
     justify-content: center;
 }
 
-.jumbotron h1 {
-    background-color: #1d2b1c;
+.jumbotron >h1 {
     display: inline-block;
     color: white;
-    font-weight: 700;
+    font-weight: 450;
     padding: 10px 35px;
     border-radius: 5px;
 }
