@@ -1,0 +1,34 @@
+.jumbotron {
+    display: flex;
+    align-items: center;
+    height: 350px;
+    background-image: url("../images/forest.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+section.container .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbotron h1 {
+    background-color: #1d2b1c;
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    padding: 10px 35px;
+    border-radius: 5px;
+}
+
+.jumbotron .row {
+    align-content: center;
+    justify-content: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
