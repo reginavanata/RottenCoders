@@ -1,38 +1,90 @@
-.jumbotron {
-    /*commented out the following two attributes so the text on the jumbotron could be centered*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    background-image: url("images/forest.jpg");
-    background-size: cover;
-    background-position: center;
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    perspective: 1500px;
 }
 
-section.container .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+a[data-toggle="collapse"] {
+    position: relative;
 }
 
-.jumbotron >h1 {
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-weight: 450;
-    padding: 10px 35px;
-    border-radius: 5px;
-    text-shadow: -1px 1px 2px #23430C,
-    1px 1px 2px #23430C,
-    1px -1px 0 #23430C,
-    -1px -1px 0 #23430C;
-}
-/*commented out this style... I don't think we need it anymore*/
-/*.jumbotron .row {
-    align-content: center;
-    justify-content: center;
-}*/
 
-header nav {
-    display: flex;
-    justify-content: flex-end;
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #f4f7f5;
+    color: #000000;
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transform-origin: bottom left;
+    padding: 15px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar.active {
+    margin-left: -250px;
+    transform: rotateY(100deg); /* Rotate sidebar vertically by 100 degrees. */
+}
+
+
+#sidebar ul p {
+    color: #000000;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    color: #000000;
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    text-decoration: none;
+}
+#sidebar ul li a:hover {
+    color: #2c882b;
+
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #000000;
+
+}
+
+ul ul a {
+    color: #000000;
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    text-decoration: none;
+}
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+#topnav {
+    background-color: #28a745;
+}
+
+/************************************
+            MEDIA QUERIES
+ ************************************/
+
+@media (max-width: 767px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+        transform: rotateY(0deg);
+    }
+
 }
