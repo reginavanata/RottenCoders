@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>FAQ</title>
+
+</head>
+<body>
+<!--Navbar-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <a class="navbar-brand" href="https://software.greenrivertech.net"><img src="images/logo.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<!--Disclaimer Banner-->
+<div class="card text-center border-warning">
+    <div class="card-header bg-warning">
+        DISCLAIMER
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">The information provided here is not official or legally binding. This is a resource created by students, for students.</h5>
+
+    </div>
+</div>
+<!--Jumbotron with page header and image-->
+<!--I commented out the original jumbotron because I couldn't get it to look right-->
+<!--<section class="jumbotron">
+    <div class="container">
+        <div class="row text-center">
+            <h1>Green River College Software Development Program - Frequently Asked Questions</h1>
+        </div>
+    </div>
+</section>-->
+<div class="jumbotron">
+    <h1>Green River College Software Development Program - Frequently Asked Questions</h1>
+</div>
+<!--Container for page content-->
+<div class="container-fluid">
+    <div class="row">
+        <!--Side Nav-->
+        <section class="col-4">
+            <h6>This will be a link area</h6>
+        </section>
+        <!--Accordion Questions-->
+        <section class="col-8">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Collapsible Group Item #1
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group Item #2
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Some placeholder content for the second accordion panel. This panel is hidden by default.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Collapsible Group Item #3
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+<p class="row justify-content-center"> <!--button centered on page-->
+
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#questionForm" aria-expanded="false" aria-controls="questionForm">
+        Can't find what you are looking for?
+    </button>
+</p>
+<div class="collapse" id="questionForm">
+    <div class="card card-body">
+        <form id="pizza-form" action="confirm.php" method="post">
+
+            <!--  Contact info  -->
+            <fieldset class="form-group border p-2">
+                <legend>Contact Information</legend>
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" class="form-control" id="fname" name="fname" aria-describedby="fname"
+                           placeholder="Enter first name">
+                    <span class="err" id="err-fname">Please enter first name</span>
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" class="form-control" id="lname" name="lname" aria-describedby="lname"
+                           placeholder="Enter last name">
+                    <span class="err" id="err-lname">Please enter last name</span>
+
+                </div>
+            </fieldset>
+
+            <!-- https://tostrander.greenriverdev.com/305/pizza/confirm.php?fname=Joe&lname=S&method=delivery&address=123+Elm+St&toppings=pepperoni&toppings=sausage&toppings=olives -->
+
+            <!--  Pickup or delivery  -->
+            <fieldset class="form-group border p-2">
+                <legend>Pickup or Delivery</legend>
+                <div class="form-group">
+                    <div class="radio">
+                        <label><input id="pickup" type="radio" name="method" value="pickup" checked> Pickup</label>
+                    </div>
+                    <div class="radio">
+                        <label><input id="delivery" type="radio" name="method" value="delivery"> Delivery</label>
+                    </div>
+                    <span class="err" id="err-method">Please select pickup or delivery</span>
+                </div>
+                <div id="address-block" class="form-group">
+                    <label for="address">Address</label>
+                    <textarea class="form-control" id="address" name="address" aria-describedby="address"
+                              rows="5"></textarea>
+                    <span class="err" id="err-address">Please enter address</span>
+                </div>
+            </fieldset>
+
+            <!--  Toppings  -->
+            <fieldset class="form-group border p-2">
+                <legend>Toppings</legend>
+                <div class="form-group">
+                    <label><input type="checkbox" value="pepperoni" name="toppings[]"> Pepperoni</label><br>
+                    <label><input type="checkbox" value="sausage" name="toppings[]"> Sausage</label><br>
+                    <label><input type="checkbox" value="olives" name="toppings[]"> Olives</label><br>
+                    <label><input type="checkbox" value="mushrooms" name="toppings[]"> Mushrooms</label><br>
+                    <label><input type="checkbox" value="onions" name="toppings[]"> Onions</label><br>
+                    <label><input type="checkbox" value="pineapple" name="toppings[]"> Pineapple</label>
+                </div>
+            </fieldset>
+
+            <!--  Pizza size  -->
+            <fieldset class="form-group border p-2">
+                <legend>Pizza Size</legend>
+                <div class="form-group">
+                    <select class="form-control" id="size" name="size">
+                        <option value="none">Select a Size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                    <span class="err" id="err-size">Please select a size</span>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary">Place Order</button>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5 mt-5" style="background: #f8f8f8 !important;">
+
+    <div style="background-color: #28a745!important;">
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row py-4 d-flex align-items-center">
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+        <!-- Grid row -->
+        <div class="row mt-3 dark-grey-text">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+                <!-- Content -->
+                <h6 class="text-uppercase font-weight-bold">Green River College</h6>
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>This site provides information and resources for students in Green River's Software Development Bachelor's Degree program.</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a class="dark-grey-text" href="https://www.itconnect.greenrivertech.net/internships" target="_blank">Internships</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="https://www.itconnect.greenrivertech.net/studentResources" target="_blank">Student Resources</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="https://www.boardmasters.greenriverdev.com/" target="_blank">BoardMasters Club</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="http://greenrivertech.net/frequently-asked-questions.php" target="_blank">Help</a>
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Follow</h6>
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a class="dark-grey-text" href="" target="#">Instagram</a>
+                <p>
+                    <a class="dark-grey-text" href="" target="#">LinkedIn</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="" target="#">Facebook</a>
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Legal</h6>
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a class="dark-grey-text" href="http://www.greenriver.edu/about-us/website/privacy-notice.htm" target="_blank">Privacy Policy</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="http://www.greenriver.edu/student-affairs/financial-aid/ethical-principles-and-code-of-conduct.htm" target="_blank">Code of Conduct</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="#">Admin Login</a>
+                </p>
+
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50 py-3">© 2021 Green River College Technology Program
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+<!-- jQuery first, then Popper.js, then bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
