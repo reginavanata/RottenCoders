@@ -1,0 +1,38 @@
+.jumbotron {
+    /*commented out the following two attributes so the text on the jumbotron could be centered*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    background-image: url("images/forest.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+section.container .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbotron >h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 450;
+    padding: 10px 35px;
+    border-radius: 5px;
+    text-shadow: -1px 1px 2px #23430C,
+    1px 1px 2px #23430C,
+    1px -1px 0 #23430C,
+    -1px -1px 0 #23430C;
+}
+/*commented out this style... I don't think we need it anymore*/
+/*.jumbotron .row {
+    align-content: center;
+    justify-content: center;
+}*/
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
