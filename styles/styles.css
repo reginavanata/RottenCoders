@@ -24,11 +24,28 @@ section.container .row {
     1px -1px 0 #23430C,
     -1px -1px 0 #23430C;
 }
+.jumbotron h3 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 450;
+    padding: 10px 35px;
+    border-radius: 5px;
+    text-shadow: -1px 1px 2px #23430C,
+    1px 1px 2px #23430C,
+    1px -1px 0 #23430C,
+    -1px -1px 0 #23430C;
+}
 
+#homeButton {
+    display: flex;
+    justify-content: center;
+}
 .jumbotron .row {
     align-content: center;
     justify-content: center;
 }
+
 
 @media screen and (max-width: 1024px){
     body{
@@ -57,4 +74,42 @@ footer a{
 .btn-form {
     background-color: #589415;
     color: #f8f8f8;
+    margin-top: 15px;
 }
+
+.btn-primary {
+    background-color: #589415;
+    color: #f8f8f8;
+    margin-top: 15px;
+}
+
+.offcanvas-header{ display:none; }
+
+@media (max-width: 992px) {
+    .offcanvas-header{ display:block; }
+    .navbar-collapse {
+        position: fixed;
+        top:0;
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: black;
+        transition: visibility .2s ease-in-out, -webkit-transform .2s ease-in-out;
+    }
+    .navbar-collapse.show {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+}
+
+.err {
+    color: darkred;
+    display: none;
+}
+
+
+
