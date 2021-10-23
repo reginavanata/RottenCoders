@@ -111,5 +111,22 @@ footer a{
     display: none;
 }
 
+.navbar-toggle {
+    margin-top: 30px;
+}
+
+@media screen and (max-width:767px) {
+    .navbar .navbar-collapse {
+        background: #f8f8f8;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+#sidebox {
+    background-color: #589415;
+    color: white;
+    font-size: 18px;
+}
 
 
