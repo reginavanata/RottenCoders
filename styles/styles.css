@@ -1,7 +1,11 @@
-.jumbotron {
+/*body{
     display: flex;
-    align-items: center;
-    height: 350px;
+    flex-direction: column;
+    min-height: 100vh;
+}*/
+
+.jumbotron {
+
     background-image: url("../images/forest.jpg");
     background-size: cover;
     background-position: center;
@@ -15,12 +19,16 @@ section.container .row {
 }
 
 .jumbotron h1 {
-    background-color: #1d2b1c;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     color: white;
-    font-weight: 700;
+    font-weight: 450;
     padding: 10px 35px;
     border-radius: 5px;
+    text-shadow: -1px 1px 2px #23430C,
+    1px 1px 2px #23430C,
+    1px -1px 0 #23430C,
+    -1px -1px 0 #23430C;
 }
 .jumbotron h3 {
     display: flex;
@@ -61,15 +69,25 @@ header nav {
 
 
 footer {
-
+    position: relative;
+    bottom: 0;
+    width: 100%;
     background-color: #1d2b1c;
     color: #f8f8f8;
 }
+
+/*.page-footer {
+    position: relative;
+    margin-top: -150px; !* negative value of footer height *!
+    height: 150px;
+    clear:both;
+    padding-top:20px;
+}*/
 footer a{
     color: #f8f8f8;
 }
 
-.btn-form {
+.btn-form, .btn {
     background-color: #589415;
     color: #f8f8f8;
     margin-top: 15px;
@@ -109,5 +127,28 @@ footer a{
     display: none;
 }
 
+.navbar-toggle {
+    margin-top: 30px;
+}
 
+@media screen and (max-width:767px) {
+    .navbar .navbar-collapse {
+        background: #f8f8f8;
+        position: absolute;
+        width: 100%;
+    }
+
+    .col-2 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 30%;
+
+    }
+
+    #sidebox {
+        background-color: #589415;
+        color: white;
+        font-size: 18px;
+    }
+}
 
