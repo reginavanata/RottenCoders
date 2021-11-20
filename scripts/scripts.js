@@ -60,3 +60,15 @@ function clearErrors()
         errors[i].style.display = "none";
     }
 }
+
+//Validate Search Bar
+document.getElementById("searchbutton").onclick=function(){
+    let searchValid = true;
+
+    let searchResult = document.getElementById("uinput").value;
+    if(searchResult === ""){
+        searchValid= false;
+    }
+    return searchValid;
+
+};

@@ -1,3 +1,18 @@
+
+html,
+body {
+    height: 100%;
+    position: relative;
+}
+
+.main-container {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 300px; /* height of your footer */
+}
+
 .jumbotron {
 
     background-image: url("../images/forest.jpg");
@@ -63,15 +78,25 @@ header nav {
 
 
 footer {
-
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #1d2b1c;
     color: #f8f8f8;
 }
+
+/*.page-footer {
+    position: relative;
+    margin-top: -150px; !* negative value of footer height *!
+    height: 150px;
+    clear:both;
+    padding-top:20px;
+}*/
 footer a{
     color: #f8f8f8;
 }
 
-.btn-form {
+.btn-form, .btn {
     background-color: #589415;
     color: #f8f8f8;
     margin-top: 15px;

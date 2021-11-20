@@ -8,14 +8,14 @@ function validate()
 
     //Validate username
     let username = document.getElementById("username").value;
-    if (username == "") {
+    if (username == "" || username !== "admin") {
         document.getElementById("err-username").style.display = "block";
         isValid = false;
     }
 
     //Validate password
     let password = document.getElementById("password").value;
-    if (password == "") {
+    if (password == "" || password !== "@dm1n") {
         document.getElementById("err-password").style.display = "block";
         isValid = false;
     }
