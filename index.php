@@ -48,7 +48,7 @@
 
             });
         </script>
-        <section class="col-4">
+        <section class="col-lg-2 col-sm-4">
             <div class="wrapper">
                 <!-- Sidebar -->
 
@@ -149,7 +149,7 @@
         </section>
 
         <!--Accordion Questions-->
-        <section class="col-8">
+        <section class="col-lg-10 col-sm-6">
             <div class="accordion" id="accordionExample">
                 <h3>Associate's Degrees</h3>
                 <div class="card">
