@@ -51,12 +51,21 @@
 
         <!-- Copyright -->
         <div class="footer-copyright text-center text-white-50 py-3">© 2021 Green River College Technology Program
-<p><a href="login.php">Admin Log In</a></p>
+            <p><a href="login.php">Admin Log In</a></p>
         </div>
     </div>
+    <?php
+    if(!empty($_SESSION['username'])){
+        echo '<ul class="nav navbar-nav navbar-right">
+                <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            </ul>';
+    }
+    ?>
 
 
 </footer>
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -65,11 +74,39 @@
 
 <script src="scripts/scripts.js"></script>
 <script src="scripts/sidebar.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="scripts/scripts.js"></script>
+<script src="scripts/sidebar.js"></script>
+<script src="//code.jquery.com/jquery-3.5.1.js"> </script>
+<script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+<script src="Scripts/script.js"></script>
+<script src="Scripts/script2.js"></script>
+<script src="scripts/faqscript.js"></script>
+<?php
+    if($name == "Admin"){
+        echo "<script>
+    $('#questions-answers').DataTable(
+        {
+            responsive: true
+        }
+    );
+</script>";
+    }
+?>
+<?php
+    if($name == "Search Results"){
+        echo "<script>
+        $('#results').DataTable(
+            {
+                responsive: true
+            }
+        );
+    </script>";
+}
+?>
 
 </body>
-
-
-
-
-
 </html>

@@ -1,3 +1,51 @@
+<?php
+/**
+ *  File name & path
+ *  Author
+ *  Date
+ *  Description
+ */
+
+//Turn on error reporting -- this is critical!
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+//start the session
+session_start();
+//initialize the variables
+$un = "";
+$validLogin = true;
+
+//if the user is already logged in
+if(isset($_SESSION['username'])){
+    //redirect to home page
+    header("location: index.php");
+}
+
+//If the form has been submitted
+if(!empty($_POST)) {
+    $un = $_POST['username'];
+    $pw = $_POST['password'];
+
+    //Require the credentials file, which defines a $logins array
+    require('creds.php');
+
+    //If the username is in the array and the password match
+    if (array_key_exists($un, $logins) && $pw == $logins[$un]) {
+
+        //record the username in the session array
+        $_SESSION['username'] = $un;
+
+        //Go to the page that the user came from, or else the home page
+        $page = isset($_SESSION['page']) ? $_SESSION['page'] : "admin.php";
+        header('location: ' .$page);
+    }
+
+    //Invalid login -- set flag variable
+    $validLogin = false;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,16 +62,16 @@
 <div class="row justify-content-center mt-5">
 
     <section class="col-4 justify-content-center" id="form-box">
-        <form id="login-form" action="admin.php" method="get">
+        <form id="login-form" action="#" method="post">
             <fieldset class="form-group border p-2">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" aria-describedby="username">
+                    <input type="text" class="form-control" id="username" aria-describedby="username" name="username">
                     <span class="err" id="err-username">Please enter a valid username</span>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password">
+                    <input type="password" class="form-control" id="password" name="password">
                     <span class="err" id="err-password">Please enter a valid password</span>
                 </div>
                 <button type="submit" class="btn btn-primary">Log In</button>
@@ -34,7 +82,7 @@
 
 </div>
 
-</div>
+
 <?php
 //Turn on error reporting
 ini_set('display_errors', 1);
