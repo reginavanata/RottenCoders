@@ -12,7 +12,10 @@ session_start();
               type="image/png"
               href="../images/lilgator.JPG">
     <!-- bootstrap CSS -->
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="styles/styles.css">
     <link href="styles/sidenav-styles.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/sidebar.css">
@@ -21,7 +24,7 @@ session_start();
     <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
 
-    <title>GRC FAQ <?php echo $page ?></title>
+    <title>GRC FAQ <?php echo $name ?></title>
 
 
 </head>
@@ -52,7 +55,8 @@ session_start();
         </ul>
         <?php
         if($name == "Admin"){
-            echo '<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add a New FAQ</button>';
+            echo '<input id="homeButton" type=button onClick="parent.location=\'newfaq.php\'"
+                   value="Add a New FAQ">';
         }
         ?>
 
